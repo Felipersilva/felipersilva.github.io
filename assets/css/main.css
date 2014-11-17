@@ -6454,6 +6454,7 @@ header .nav-pills li a {
 }
 .works .folio-square {
   margin-bottom: 30px;
+  max-width: 410px;
   position: relative;
 }
 .works .folio-square .caption {
