@@ -11,54 +11,6 @@
 // Core variables and mixins
 @import "vendor/bootstrap/variables.less";
 @import "vendor/bootstrap/mixins.less";
-
-// Reset and dependencies
-@import "vendor/bootstrap/normalize.less";
-@import "vendor/bootstrap/print.less";
-@import "vendor/bootstrap/glyphicons.less";
-
-// Core CSS
-@import "vendor/bootstrap/scaffolding.less";
-@import "vendor/bootstrap/type.less";
-@import "vendor/bootstrap/code.less";
-@import "vendor/bootstrap/grid.less";
-@import "vendor/bootstrap/tables.less";
-@import "vendor/bootstrap/forms.less";
-@import "vendor/bootstrap/buttons.less";
-
-// Components
-@import "vendor/bootstrap/component-animations.less";
-@import "vendor/bootstrap/dropdowns.less";
-@import "vendor/bootstrap/button-groups.less";
-@import "vendor/bootstrap/input-groups.less";
-@import "vendor/bootstrap/navs.less";
-@import "vendor/bootstrap/navbar.less";
-@import "vendor/bootstrap/breadcrumbs.less";
-@import "vendor/bootstrap/pagination.less";
-@import "vendor/bootstrap/pager.less";
-@import "vendor/bootstrap/labels.less";
-@import "vendor/bootstrap/badges.less";
-@import "vendor/bootstrap/jumbotron.less";
-@import "vendor/bootstrap/thumbnails.less";
-@import "vendor/bootstrap/alerts.less";
-@import "vendor/bootstrap/progress-bars.less";
-@import "vendor/bootstrap/media.less";
-@import "vendor/bootstrap/list-group.less";
-@import "vendor/bootstrap/panels.less";
-@import "vendor/bootstrap/responsive-embed.less";
-@import "vendor/bootstrap/wells.less";
-@import "vendor/bootstrap/close.less";
-
-// Components w/ JavaScript
-@import "vendor/bootstrap/modals.less";
-@import "vendor/bootstrap/tooltip.less";
-@import "vendor/bootstrap/popovers.less";
-@import "vendor/bootstrap/carousel.less";
-
-// Utility classes
-@import "vendor/bootstrap/utilities.less";
-@import "vendor/bootstrap/responsive-utilities.less";
-
 @import "../../bower_components/lesshat/build/lesshat.less";
 
 .breve {
@@ -71,6 +23,37 @@
 
 /**
 *
+* Home
+*
+**/
+
+.home {
+  height: 95vh;
+  .slide-home {
+    height: 90%;
+    margin-bottom: 0px;
+    overflow: hidden;
+    position: relative;
+    .slick-list,
+    .slick-track {
+    	height: 100%;
+    	width: 100%;
+    }
+    .slick-prev {
+    	left: 10px;
+    }
+    .slick-next {
+    	right: 10px;
+    }
+    img {
+
+    	
+    }
+  }
+}
+
+/**
+*
 * Header
 *
 **/
@@ -79,6 +62,7 @@ header {
 	margin-top: 20px;
 	margin-bottom: 20px;
 	.nav-pills {
+		padding: 5px 0;
 		li {
 			margin-right: 30px;
 			a {
@@ -225,6 +209,23 @@ header {
 	.content {
 		margin-bottom: 30px;
 	}
+	.item {
+		margin-bottom: @grid-gutter-width;
+	}
+}
+/**
+*
+* Footer
+*
+**/
+
+footer {
+  height: 50px;
+  background-color: #fff;
+  padding: 10px;
+  .fa {
+  	font-size: 28px;
+  }
 }
 
 /**

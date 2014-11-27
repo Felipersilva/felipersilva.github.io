@@ -3,10 +3,9 @@ $(document).ready(function () {
 	  dots: true,
 	  infinite: true,
 	  speed: 500,
-	  fade: true,
 	  slide: 'div',
-	  cssEase: 'linear'
+	  easing: 'linear'
 	});
-	console.log("teste");
+	$('.slick-slide').imagefill();
 });
 

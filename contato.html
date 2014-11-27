@@ -13,10 +13,11 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <link rel="stylesheet" href="assets/css/normalize.css">
+                <link rel="stylesheet" href="assets/css/bootstrap.css">
         <link rel="stylesheet" href="assets/css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
-    <body class="about">
+    <body class="page clientes">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -28,20 +29,53 @@
                 </div>
                 <div class="col-md-9">
                     <ul class="nav nav-pills" role="tablist">
-                      <li role="presentation" class="active"><a href="index.html">Home</a></li>
-                      <li role="presentation"><a href="trabalhos.html">Trabalhos</a></li>
-                      <li role="presentation"><a href="about.html">Quem sou eu?</a></li>
-                      <li role="presentation"><a href="clientes.html">Clientes</a></li>
-                      <li role="presentation"><a href="contato.html">Contato</a></li>
+                      <li><a href="/">Home</a></li>
+                      <li><a href="trabalhos.html">Trabalhos</a></li>
+                      <li><a href="about.html">Quem sou eu?</a></li>
+                      <li><a href="clientes.html">Clientes</a></li>
+                      <li class="active"><a href="contato.html">Contato</a></li>
                     </ul>
                 </div>
             </div>
         </header>
         <section id="main" class="container-fluid">
             <div class="row">
-                <div class="col-md-12">
-                    <h1>Lorem ipsum</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione minus tempore autem sequi neque, nobis facere similique repellendus error laborum mollitia ab quos magni, fugit, quo a repellat eaque aspernatur.</p>
+                <div class="col-md-3 text-right border">
+                    <div class="sidebar-page">
+                        <h5>contatos</h5>
+                    </div>
+                </div>
+                <div class="col-md-9 page-content">
+					<div class="row">
+						<div class="col-md-6">
+							<p>Olá Amigos(a) obrigado por visitar meu portfolio, espero que tenha gostado. Para entrar em contato para um orçamento, contratação ou duvidas.</p>
+							<h6>ENTRE EM CONTATO ABAIXO:</h6>
+							<hr>
+							<address>
+								TELEFONES;<br/>
+								BRASIL - SÃO PAULO -SP<br/>
+								3875.6694<br/>
+								99809-7259<br/>
+							</address>
+						</div>
+					</div>
+					<div class="row">
+						<form action="" method="POST" role="form" class="col-md-6">
+							<div class="form-group">
+								<label for="" class="sr-only">Nome</label>
+								<input type="text" class="form-control" id="" placeholder="Nome:">
+							</div>
+							<div class="form-group">
+								<label for="" class="sr-only">Assunto</label>
+								<input type="text" class="form-control" id="" placeholder="Assunto:">
+							</div>
+							<div class="form-group">
+								<label for="" class="sr-only">Comentário</label>
+								<textarea class="form-control" rows="5" placeholder="Comentário:"></textarea>
+							</div>
+							<button type="submit" class="btn btn-pdf pull-right">Enviar</button>
+						</form>
+					</div>
                 </div>
             </div>
         </section>
