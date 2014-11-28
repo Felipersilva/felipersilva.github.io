@@ -16,6 +16,113 @@
 }
 /**
 *
+* Loader
+*
+**/
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.pace-inactive {
+  display: none;
+}
+.pace .pace-progress {
+  background: #29d;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  height: 2px;
+  -webkit-transition: width 1s;
+  -moz-transition: width 1s;
+  -o-transition: width 1s;
+  transition: width 1s;
+}
+.pace .pace-progress-inner {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+  opacity: 1.0;
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  -moz-transform: rotate(3deg) translate(0px, -4px);
+  -ms-transform: rotate(3deg) translate(0px, -4px);
+  -o-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px);
+}
+.pace .pace-activity {
+  display: block;
+  position: fixed;
+  z-index: 2000;
+  top: 15px;
+  right: 15px;
+  width: 14px;
+  height: 14px;
+  border: solid 2px transparent;
+  border-top-color: #29d;
+  border-left-color: #29d;
+  border-radius: 10px;
+  -webkit-animation: pace-spinner 400ms linear infinite;
+  -moz-animation: pace-spinner 400ms linear infinite;
+  -ms-animation: pace-spinner 400ms linear infinite;
+  -o-animation: pace-spinner 400ms linear infinite;
+  animation: pace-spinner 400ms linear infinite;
+}
+@-webkit-keyframes pace-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes pace-spinner {
+  0% {
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes pace-spinner {
+  0% {
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-ms-keyframes pace-spinner {
+  0% {
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes pace-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/**
+*
 * Home
 *
 **/
@@ -23,7 +130,7 @@
   height: 95vh;
 }
 .home .slide-home {
-  height: 90%;
+  height: 100%;
   margin-bottom: 0px;
   overflow: hidden;
   position: relative;
@@ -85,16 +192,23 @@ header .nav-pills li a {
 * Works
 *
 **/
-.works .folio-thumb {
+.folio-thumb {
   max-width: 100%;
   height: auto;
 }
-.works .folio-square {
-  margin-bottom: 30px;
+.folio-list .row div {
+  padding-left: 0;
+  padding-right: 0;
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+.folio-square {
   max-width: 410px;
   position: relative;
 }
-.works .folio-square .caption {
+.folio-square .caption {
   position: absolute;
   top: 0;
   right: 0;
@@ -111,7 +225,7 @@ header .nav-pills li a {
   -moz-opacity: 0;
   opacity: 0;
 }
-.works .folio-square .caption:hover {
+.folio-square .caption:hover {
   -webkit-transition: all 0.8s ease-in;
   -moz-transition: all 0.8s ease-in;
   -o-transition: all 0.8s ease-in;
@@ -123,7 +237,7 @@ header .nav-pills li a {
   opacity: 1;
   background: rgba(0, 0, 0, 0.78);
 }
-.works .folio-square .caption .content {
+.folio-square .caption .content {
   position: absolute;
   top: 0;
   right: 0;
@@ -135,10 +249,10 @@ header .nav-pills li a {
   text-align: left;
   padding-left: 15px;
 }
-.works .folio-square .caption .content p {
+.folio-square .caption .content p {
   font-size: 14px;
 }
-.works .folio-square .caption .content h5 {
+.folio-square .caption .content h5 {
   font-size: 18px;
   font-weight: 800;
 }
@@ -223,4 +337,16 @@ footer .fa {
   color: #fff;
   padding: 2px 12px;
   text-shadow: 0px 1px 0px rgba(150, 150, 150, 0.4);
+}
+#scrollUp {
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  font-size: 28px;
+  color: #000;
+}
+#scrollUp .fa {
+  top: 0;
 }
